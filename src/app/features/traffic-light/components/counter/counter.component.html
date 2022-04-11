@@ -3,4 +3,4 @@
   <span>{{ count$ | async }}</span>
   <button (click)="increment()" class="btn btn-sm btn-success">+</button>
   </div>
-  <button (click)="resetCount()" class="btn btn-primary">Reset Count</button>
+  <button *ngIf="(count$ | async) != null && (count$ | async) != 0 " (click)="resetCount()" class="btn btn-primary">Reset Count</button>
