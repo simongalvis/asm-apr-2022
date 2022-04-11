@@ -1,0 +1,10 @@
+<p>Traffic Light!</p>
+
+
+
+<div class="light" [ngClass]="(color$ | async) || ''"></div>
+
+
+
+<button (click)="cycle()" class="btn btn-primary">Change Light</button>
+
